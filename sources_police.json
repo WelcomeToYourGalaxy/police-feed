@@ -1,0 +1,1686 @@
+{
+ "_note": "Sources for the police wire — after the Law Enforcement section of Suppression. 'direct' are the oversight bodies, courts and watchdogs that record what police do, read from their own feeds. 'gnews' are Google News regional editions, written so that a subject term is always paired with a policing or accountability term: a crime report is not this wire's business, what the police did or were not held to account for is. 'events' are standing watches on the recurring acts — a ruling, an inquest, a watchdog finding, a procurement. Dead feeds are printed by verify_sources.py --dead.",
+ "direct": [
+  {
+   "name": "UN Human Rights · OHCHR",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.ohchr.org/en/rss/news"
+  },
+  {
+   "name": "UN Office on Drugs and Crime",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.unodc.org/unodc/en/frontpage/rss.xml"
+  },
+  {
+   "name": "Council of Europe · anti-torture",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.coe.int/en/web/cpt/-/rss"
+  },
+  {
+   "name": "European Court of Human Rights",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.echr.coe.int/rss"
+  },
+  {
+   "name": "Inter-American Commission on Human Rights",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.oas.org/en/iachr/rss/rss_pr.xml"
+  },
+  {
+   "name": "US Department of Justice · Civil Rights",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.justice.gov/feeds/opa/justice-news.xml"
+  },
+  {
+   "name": "IOPC (England & Wales)",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.policeconduct.gov.uk/rss.xml"
+  },
+  {
+   "name": "Europol",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.europol.europa.eu/rss.xml"
+  },
+  {
+   "name": "Amnesty International",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.amnesty.org/en/rss/"
+  },
+  {
+   "name": "Human Rights Watch",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.hrw.org/rss/news"
+  },
+  {
+   "name": "Electronic Frontier Foundation",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.eff.org/rss/updates.xml"
+  },
+  {
+   "name": "ACLU",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.aclu.org/feed"
+  },
+  {
+   "name": "Privacy International",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://privacyinternational.org/rss.xml"
+  },
+  {
+   "name": "Statewatch",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.statewatch.org/rss/"
+  },
+  {
+   "name": "Big Brother Watch",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://bigbrotherwatch.org.uk/feed/"
+  },
+  {
+   "name": "EDRi",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://edri.org/feed/"
+  },
+  {
+   "name": "Access Now",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.accessnow.org/feed/"
+  },
+  {
+   "name": "Center for Constitutional Rights",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://ccrjustice.org/rss.xml"
+  },
+  {
+   "name": "The Citizen Lab",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://citizenlab.ca/feed/"
+  },
+  {
+   "name": "Committee to Protect Journalists",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://cpj.org/feed/"
+  },
+  {
+   "name": "Front Line Defenders",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.frontlinedefenders.org/rss.xml"
+  },
+  {
+   "name": "Transparency International",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.transparency.org/en/rss"
+  },
+  {
+   "name": "Fair Trials",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.fairtrials.org/feed/"
+  },
+  {
+   "name": "Prison Policy Initiative",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://www.prisonpolicy.org/rss.xml"
+  },
+  {
+   "name": "Vera Institute of Justice",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://www.vera.org/feed"
+  },
+  {
+   "name": "Institute for Justice",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://ij.org/feed/"
+  },
+  {
+   "name": "The Marshall Project",
+   "lang": "en",
+   "standing": "press",
+   "url": "https://www.themarshallproject.org/rss/recent.rss"
+  },
+  {
+   "name": "The Intercept",
+   "lang": "en",
+   "standing": "press",
+   "url": "https://theintercept.com/feed/?rss"
+  },
+  {
+   "name": "Bellingcat",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://www.bellingcat.com/feed/"
+  },
+  {
+   "name": "Netpol",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://netpol.org/feed/"
+  },
+  {
+   "name": "UN Working Group on Arbitrary Detention",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.ohchr.org/en/rss/special-procedures"
+  },
+  {
+   "name": "Association for the Prevention of Torture",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.apt.ch/rss.xml"
+  },
+  {
+   "name": "World Organisation Against Torture (OMCT)",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.omct.org/en/rss"
+  },
+  {
+   "name": "Redress",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://redress.org/feed/"
+  },
+  {
+   "name": "International Commission on Missing Persons",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.icmp.int/feed/"
+  },
+  {
+   "name": "International Committee of the Red Cross",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.icrc.org/en/rss.xml"
+  },
+  {
+   "name": "UNHCR",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://www.unhcr.org/rss.xml"
+  },
+  {
+   "name": "IOM Missing Migrants",
+   "lang": "en",
+   "standing": "official",
+   "url": "https://missingmigrants.iom.int/rss.xml"
+  },
+  {
+   "name": "Border Violence Monitoring Network",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://borderviolence.eu/feed/"
+  },
+  {
+   "name": "Detention Watch Network",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.detentionwatchnetwork.org/rss.xml"
+  },
+  {
+   "name": "Global Detention Project",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://www.globaldetentionproject.org/feed"
+  },
+  {
+   "name": "Freedom House",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://freedomhouse.org/rss.xml"
+  },
+  {
+   "name": "Reporters Without Borders",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://rsf.org/en/rss.xml"
+  },
+  {
+   "name": "Business & Human Rights Resource Centre",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://www.business-humanrights.org/en/rss/"
+  },
+  {
+   "name": "CIVICUS Monitor",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://monitor.civicus.org/feed/"
+  },
+  {
+   "name": "Article 19",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.article19.org/feed/"
+  },
+  {
+   "name": "European Roma Rights Centre",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.errc.org/rss"
+  },
+  {
+   "name": "Harm Reduction International",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://hri.global/feed/"
+  },
+  {
+   "name": "Global Network of Sex Work Projects",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://www.nswp.org/rss.xml"
+  },
+  {
+   "name": "ILGA World",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://ilga.org/feed"
+  },
+  {
+   "name": "National Homelessness Law Center",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://homelesslaw.org/feed/"
+  },
+  {
+   "name": "Omega Research Foundation",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://omegaresearchfoundation.org/feed"
+  },
+  {
+   "name": "Campaign Against Arms Trade",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://caat.org.uk/feed/"
+  },
+  {
+   "name": "Forensic Architecture",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://forensic-architecture.org/rss"
+  },
+  {
+   "name": "Innocence Project",
+   "lang": "en",
+   "standing": "rights",
+   "url": "https://innocenceproject.org/feed/"
+  },
+  {
+   "name": "National Registry of Exonerations",
+   "lang": "en",
+   "standing": "research",
+   "url": "https://www.law.umich.edu/special/exoneration/Pages/rss.aspx"
+  }
+ ],
+ "gnews": [
+  {
+   "label": "English (US) 1",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"qualified immunity\" OR \"police accountability\" OR \"civilian oversight\" OR \"consent decree\""
+  },
+  {
+   "label": "English (UK) 2",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-GB",
+   "gl": "GB",
+   "ceid": "GB:en-GB",
+   "query": "\"police corruption\" OR \"police bribery\" OR \"civil forfeiture\" OR \"policing for profit\""
+  },
+  {
+   "label": "English (India) 3",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-IN",
+   "gl": "IN",
+   "ceid": "IN:en",
+   "query": "(gang OR cartel OR \"organised crime\") AND (police infiltration OR corrupt officer OR collusion)"
+  },
+  {
+   "label": "English (Nigeria) 4",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-NG",
+   "gl": "NG",
+   "ceid": "NG:en",
+   "query": "\"died in custody\" OR \"killed by police\" OR \"excessive force\" OR \"police shooting\" inquiry"
+  },
+  {
+   "label": "English (South Africa) 5",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-ZA",
+   "gl": "ZA",
+   "ceid": "ZA:en",
+   "query": "\"police militarisation\" OR \"military surplus\" police OR \"riot police\" crackdown OR \"protest policing\""
+  },
+  {
+   "label": "English (Australia) 6",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-AU",
+   "gl": "AU",
+   "ceid": "AU:en",
+   "query": "\"facial recognition\" police OR \"predictive policing\" OR \"licence plate reader\" OR \"cell-site simulator\""
+  },
+  {
+   "label": "English (Kenya) 7",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-KE",
+   "gl": "KE",
+   "ceid": "KE:en",
+   "query": "\"geofence warrant\" OR \"data broker\" police OR \"bulk collection\" OR warrantless surveillance"
+  },
+  {
+   "label": "English (Philippines) 8",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-PH",
+   "gl": "PH",
+   "ceid": "PH:en",
+   "query": "\"undercover police\" OR spycops OR informant activist OR \"agent provocateur\" OR entrapment"
+  },
+  {
+   "label": "English (US) 9",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"stop and search\" OR \"stop and frisk\" OR \"racial profiling\" police OR \"know your rights\""
+  },
+  {
+   "label": "English (UK) 10",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-GB",
+   "gl": "GB",
+   "ceid": "GB:en-GB",
+   "query": "\"grand jury\" subpoena refuse OR \"civil contempt\" jailed OR \"compelled testimony\""
+  },
+  {
+   "label": "English (India) 11",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-IN",
+   "gl": "IN",
+   "ceid": "IN:en",
+   "query": "\"surveillance drone\" police OR \"aerial surveillance\" city OR \"wide-area surveillance\""
+  },
+  {
+   "label": "English (Nigeria) 12",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-NG",
+   "gl": "NG",
+   "ceid": "NG:en",
+   "query": "spyware police OR Pegasus target OR \"phone extraction\" OR Cellebrite"
+  },
+  {
+   "label": "English (South Africa) 13",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-ZA",
+   "gl": "ZA",
+   "ceid": "ZA:en",
+   "query": "\"defund the police\" OR \"police reform\" bill OR \"unarmed response\" OR \"crisis response team\""
+  },
+  {
+   "label": "English (Australia) 14",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-AU",
+   "gl": "AU",
+   "ceid": "AU:en",
+   "query": "\"no-knock\" raid OR \"SWAT\" raid wrong address OR \"body camera\" footage withheld"
+  },
+  {
+   "label": "Spanish (Spain) 1",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "query": "\"abuso policial\" OR \"brutalidad policial\" OR \"uso excesivo de la fuerza\""
+  },
+  {
+   "label": "Spanish (Americas) 2",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "MX",
+   "ceid": "MX:es-419",
+   "query": "\"corrupción policial\" OR soborno policía OR extorsión policial"
+  },
+  {
+   "label": "Spanish (Argentina) 3",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "AR",
+   "ceid": "AR:es-419",
+   "query": "\"reconocimiento facial\" policía OR \"vigilancia masiva\" OR software espía"
+  },
+  {
+   "label": "Spanish (Colombia) 4",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "CO",
+   "ceid": "CO:es-419",
+   "query": "\"muerte bajo custodia\" OR \"ejecución extrajudicial\" policía"
+  },
+  {
+   "label": "Spanish (Spain) 5",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "query": "\"control de identidad\" OR \"detención arbitraria\" OR \"perfilamiento racial\""
+  },
+  {
+   "label": "Spanish (Americas) 6",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "MX",
+   "ceid": "MX:es-419",
+   "query": "\"reforma policial\" OR \"control civil\" policía OR impunidad policial"
+  },
+  {
+   "label": "French (France) 1",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "query": "\"violences policières\" OR \"usage excessif de la force\" OR IGPN"
+  },
+  {
+   "label": "French (Africa) 2",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "SN",
+   "ceid": "SN:fr",
+   "query": "\"corruption policière\" OR \"pot-de-vin\" police"
+  },
+  {
+   "label": "French (Canada) 3",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "CA",
+   "ceid": "CA:fr",
+   "query": "\"reconnaissance faciale\" police OR \"surveillance de masse\" OR logiciel espion"
+  },
+  {
+   "label": "French (France) 4",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "query": "\"mort en garde à vue\" OR \"contrôle au faciès\" OR \"détention arbitraire\""
+  },
+  {
+   "label": "French (Africa) 5",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "SN",
+   "ceid": "SN:fr",
+   "query": "\"maintien de l'ordre\" OR \"police militarisée\" OR \"grenade de désencerclement\""
+  },
+  {
+   "label": "Portuguese (Brazil) 1",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "query": "\"violência policial\" OR \"uso excessivo da força\" OR \"letalidade policial\""
+  },
+  {
+   "label": "Portuguese (Portugal) 2",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-PT",
+   "gl": "PT",
+   "ceid": "PT:pt-150",
+   "query": "\"corrupção policial\" OR milícia policial OR propina polícia"
+  },
+  {
+   "label": "Portuguese (Angola) 3",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-PT",
+   "gl": "AO",
+   "ceid": "AO:pt-150",
+   "query": "\"reconhecimento facial\" polícia OR \"vigilância em massa\""
+  },
+  {
+   "label": "Portuguese (Brazil) 4",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "query": "\"morte sob custódia\" OR \"auto de resistência\" OR \"operação policial\" mortes"
+  },
+  {
+   "label": "Portuguese (Portugal) 5",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-PT",
+   "gl": "PT",
+   "ceid": "PT:pt-150",
+   "query": "\"controle externo\" polícia OR ouvidoria de polícia OR reforma policial"
+  },
+  {
+   "label": "German 1",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "query": "Polizeigewalt OR \"unverhältnismäßige Gewalt\" Polizei"
+  },
+  {
+   "label": "German (Austria) 2",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "AT",
+   "ceid": "AT:de",
+   "query": "Polizeikorruption OR Bestechung Polizei"
+  },
+  {
+   "label": "German 3",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "query": "Gesichtserkennung Polizei OR Massenüberwachung OR Staatstrojaner"
+  },
+  {
+   "label": "German (Austria) 4",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "AT",
+   "ceid": "AT:de",
+   "query": "\"Tod in Polizeigewahrsam\" OR Racial Profiling"
+  },
+  {
+   "label": "German 5",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "query": "Polizeigesetz Verschärfung OR Versammlungsrecht Einschränkung"
+  },
+  {
+   "label": "Russian 1",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "query": "\"полицейское насилие\" OR \"превышение полномочий\" полиция"
+  },
+  {
+   "label": "Russian (Central Asia) 2",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "KZ",
+   "ceid": "KZ:ru",
+   "query": "коррупция полиция OR взятка полицейский"
+  },
+  {
+   "label": "Russian 3",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "query": "\"распознавание лиц\" полиция OR \"массовая слежка\""
+  },
+  {
+   "label": "Russian (Central Asia) 4",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "KZ",
+   "ceid": "KZ:ru",
+   "query": "\"смерть в отделении\" OR \"пытки\" полиция"
+  },
+  {
+   "label": "Arabic (Egypt) 1",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "EG",
+   "ceid": "EG:ar",
+   "query": "\"عنف الشرطة\" OR \"الإفراط في استخدام القوة\""
+  },
+  {
+   "label": "Arabic (Gulf) 2",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "AE",
+   "ceid": "AE:ar",
+   "query": "\"فساد الشرطة\" OR رشوة شرطي OR ابتزاز"
+  },
+  {
+   "label": "Arabic (Levant) 3",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "LB",
+   "ceid": "LB:ar",
+   "query": "\"التعرف على الوجه\" شرطة OR \"المراقبة الجماعية\" OR برنامج تجسس"
+  },
+  {
+   "label": "Arabic (Egypt) 4",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "EG",
+   "ceid": "EG:ar",
+   "query": "\"الوفاة في الحجز\" OR \"الاعتقال التعسفي\" OR التعذيب"
+  },
+  {
+   "label": "Chinese (PRC) 1",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-CN",
+   "gl": "CN",
+   "ceid": "CN:zh-Hans",
+   "query": "警察 暴力 OR 过度执法 OR 执法争议"
+  },
+  {
+   "label": "Chinese (Taiwan) 2",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-TW",
+   "gl": "TW",
+   "ceid": "TW:zh-Hant",
+   "query": "警察 腐败 OR 受贿 OR 索贿"
+  },
+  {
+   "label": "Chinese (Hong Kong) 3",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-HK",
+   "gl": "HK",
+   "ceid": "HK:zh-Hant",
+   "query": "人脸识别 监控 OR 大规模监控 OR 天网"
+  },
+  {
+   "label": "Chinese (PRC) 4",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-CN",
+   "gl": "CN",
+   "ceid": "CN:zh-Hans",
+   "query": "羁押 死亡 OR 任意拘留"
+  },
+  {
+   "label": "Hindi 1",
+   "lang": "hi",
+   "standing": "press",
+   "hl": "hi",
+   "gl": "IN",
+   "ceid": "IN:hi",
+   "query": "\"पुलिस हिंसा\" OR \"हिरासत में मौत\" OR \"फर्जी मुठभेड़\""
+  },
+  {
+   "label": "Hindi 2",
+   "lang": "hi",
+   "standing": "press",
+   "hl": "hi",
+   "gl": "IN",
+   "ceid": "IN:hi",
+   "query": "\"पुलिस भ्रष्टाचार\" OR रिश्वत पुलिस OR वसूली"
+  },
+  {
+   "label": "Hindi 3",
+   "lang": "hi",
+   "standing": "press",
+   "hl": "hi",
+   "gl": "IN",
+   "ceid": "IN:hi",
+   "query": "\"चेहरा पहचान\" पुलिस OR निगरानी"
+  },
+  {
+   "label": "Bengali 1",
+   "lang": "bn",
+   "standing": "press",
+   "hl": "bn",
+   "gl": "BD",
+   "ceid": "BD:bn",
+   "query": "\"পুলিশি নির্যাতন\" OR \"হেফাজতে মৃত্যু\" OR ক্রসফায়ার"
+  },
+  {
+   "label": "Bengali 2",
+   "lang": "bn",
+   "standing": "press",
+   "hl": "bn",
+   "gl": "BD",
+   "ceid": "BD:bn",
+   "query": "\"পুলিশ দুর্নীতি\" OR ঘুষ পুলিশ"
+  },
+  {
+   "label": "Indonesian 1",
+   "lang": "id",
+   "standing": "press",
+   "hl": "id",
+   "gl": "ID",
+   "ceid": "ID:id",
+   "query": "\"kekerasan polisi\" OR \"brutalitas polisi\" OR \"tewas dalam tahanan\""
+  },
+  {
+   "label": "Indonesian 2",
+   "lang": "id",
+   "standing": "press",
+   "hl": "id",
+   "gl": "ID",
+   "ceid": "ID:id",
+   "query": "\"korupsi polisi\" OR pungli polisi OR suap"
+  },
+  {
+   "label": "Indonesian 3",
+   "lang": "id",
+   "standing": "press",
+   "hl": "id",
+   "gl": "ID",
+   "ceid": "ID:id",
+   "query": "\"pengenalan wajah\" polisi OR pengawasan massal"
+  },
+  {
+   "label": "Japanese 1",
+   "lang": "ja",
+   "standing": "press",
+   "hl": "ja",
+   "gl": "JP",
+   "ceid": "JP:ja",
+   "query": "警察 不祥事 OR 過剰警備 OR 留置場 死亡"
+  },
+  {
+   "label": "Japanese 2",
+   "lang": "ja",
+   "standing": "press",
+   "hl": "ja",
+   "gl": "JP",
+   "ceid": "JP:ja",
+   "query": "顔認証 警察 OR 監視カメラ 捜査"
+  },
+  {
+   "label": "Korean 1",
+   "lang": "ko",
+   "standing": "press",
+   "hl": "ko",
+   "gl": "KR",
+   "ceid": "KR:ko",
+   "query": "경찰 과잉진압 OR 유치장 사망 OR 인권침해 경찰"
+  },
+  {
+   "label": "Korean 2",
+   "lang": "ko",
+   "standing": "press",
+   "hl": "ko",
+   "gl": "KR",
+   "ceid": "KR:ko",
+   "query": "얼굴인식 경찰 OR 감시 확대"
+  },
+  {
+   "label": "Turkish 1",
+   "lang": "tr",
+   "standing": "press",
+   "hl": "tr",
+   "gl": "TR",
+   "ceid": "TR:tr",
+   "query": "\"polis şiddeti\" OR \"orantısız güç\" OR \"gözaltında ölüm\""
+  },
+  {
+   "label": "Turkish 2",
+   "lang": "tr",
+   "standing": "press",
+   "hl": "tr",
+   "gl": "TR",
+   "ceid": "TR:tr",
+   "query": "\"polis yolsuzluğu\" OR rüşvet polis"
+  },
+  {
+   "label": "Turkish 3",
+   "lang": "tr",
+   "standing": "press",
+   "hl": "tr",
+   "gl": "TR",
+   "ceid": "TR:tr",
+   "query": "\"yüz tanıma\" polis OR toplu gözetim"
+  },
+  {
+   "label": "Italian 1",
+   "lang": "it",
+   "standing": "press",
+   "hl": "it",
+   "gl": "IT",
+   "ceid": "IT:it",
+   "query": "\"violenza della polizia\" OR \"abuso di potere\" polizia"
+  },
+  {
+   "label": "Italian 2",
+   "lang": "it",
+   "standing": "press",
+   "hl": "it",
+   "gl": "IT",
+   "ceid": "IT:it",
+   "query": "\"morte in custodia\" OR \"identificazione facciale\" polizia"
+  },
+  {
+   "label": "Italian 3",
+   "lang": "it",
+   "standing": "press",
+   "hl": "it",
+   "gl": "IT",
+   "ceid": "IT:it",
+   "query": "\"riforma della polizia\" OR codici identificativi agenti"
+  },
+  {
+   "label": "Dutch 1",
+   "lang": "nl",
+   "standing": "press",
+   "hl": "nl",
+   "gl": "NL",
+   "ceid": "NL:nl",
+   "query": "politiegeweld OR \"buitensporig geweld\" politie"
+  },
+  {
+   "label": "Dutch 2",
+   "lang": "nl",
+   "standing": "press",
+   "hl": "nl",
+   "gl": "NL",
+   "ceid": "NL:nl",
+   "query": "gezichtsherkenning politie OR massasurveillance"
+  },
+  {
+   "label": "Polish 1",
+   "lang": "pl",
+   "standing": "press",
+   "hl": "pl",
+   "gl": "PL",
+   "ceid": "PL:pl",
+   "query": "\"przemoc policji\" OR \"nadużycie władzy\" policja"
+  },
+  {
+   "label": "Polish 2",
+   "lang": "pl",
+   "standing": "press",
+   "hl": "pl",
+   "gl": "PL",
+   "ceid": "PL:pl",
+   "query": "\"rozpoznawanie twarzy\" policja OR inwigilacja"
+  },
+  {
+   "label": "Swedish 1",
+   "lang": "sv",
+   "standing": "press",
+   "hl": "sv",
+   "gl": "SE",
+   "ceid": "SE:sv",
+   "query": "polisvåld OR \"övervåld\" polis"
+  },
+  {
+   "label": "Swedish 2",
+   "lang": "sv",
+   "standing": "press",
+   "hl": "sv",
+   "gl": "SE",
+   "ceid": "SE:sv",
+   "query": "ansiktsigenkänning polis OR massövervakning"
+  },
+  {
+   "label": "Ukrainian 1",
+   "lang": "uk",
+   "standing": "press",
+   "hl": "uk",
+   "gl": "UA",
+   "ceid": "UA:uk",
+   "query": "\"поліцейське насильство\" OR \"перевищення повноважень\" поліція"
+  },
+  {
+   "label": "Ukrainian 2",
+   "lang": "uk",
+   "standing": "press",
+   "hl": "uk",
+   "gl": "UA",
+   "ceid": "UA:uk",
+   "query": "\"розпізнавання облич\" поліція OR стеження"
+  },
+  {
+   "label": "Greek 1",
+   "lang": "el",
+   "standing": "press",
+   "hl": "el",
+   "gl": "GR",
+   "ceid": "GR:el",
+   "query": "\"αστυνομική βία\" OR \"υπερβολική βία\" αστυνομία"
+  },
+  {
+   "label": "Greek 2",
+   "lang": "el",
+   "standing": "press",
+   "hl": "el",
+   "gl": "GR",
+   "ceid": "GR:el",
+   "query": "\"αναγνώριση προσώπου\" αστυνομία"
+  },
+  {
+   "label": "Persian 1",
+   "lang": "fa",
+   "standing": "press",
+   "hl": "fa",
+   "gl": "IR",
+   "ceid": "IR:fa",
+   "query": "\"خشونت پلیس\" OR \"مرگ در بازداشت\" OR بازداشت خودسرانه"
+  },
+  {
+   "label": "Persian 2",
+   "lang": "fa",
+   "standing": "press",
+   "hl": "fa",
+   "gl": "IR",
+   "ceid": "IR:fa",
+   "query": "\"تشخیص چهره\" پلیس OR نظارت گسترده"
+  },
+  {
+   "label": "Vietnamese 1",
+   "lang": "vi",
+   "standing": "press",
+   "hl": "vi",
+   "gl": "VN",
+   "ceid": "VN:vi",
+   "query": "\"bạo lực cảnh sát\" OR \"chết trong đồn\" OR lạm quyền công an"
+  },
+  {
+   "label": "Vietnamese 2",
+   "lang": "vi",
+   "standing": "press",
+   "hl": "vi",
+   "gl": "VN",
+   "ceid": "VN:vi",
+   "query": "\"nhận diện khuôn mặt\" công an OR giám sát"
+  },
+  {
+   "label": "Thai 1",
+   "lang": "th",
+   "standing": "press",
+   "hl": "th",
+   "gl": "TH",
+   "ceid": "TH:th",
+   "query": "ความรุนแรงของตำรวจ OR เสียชีวิตในการควบคุมตัว"
+  },
+  {
+   "label": "Thai 2",
+   "lang": "th",
+   "standing": "press",
+   "hl": "th",
+   "gl": "TH",
+   "ceid": "TH:th",
+   "query": "จดจำใบหน้า ตำรวจ OR สอดแนม"
+  },
+  {
+   "label": "Swahili 1",
+   "lang": "sw",
+   "standing": "press",
+   "hl": "sw",
+   "gl": "KE",
+   "ceid": "KE:sw",
+   "query": "\"unyanyasaji wa polisi\" OR \"mauaji ya polisi\" OR kifo mahabusu"
+  },
+  {
+   "label": "Swahili 2",
+   "lang": "sw",
+   "standing": "press",
+   "hl": "sw",
+   "gl": "KE",
+   "ceid": "KE:sw",
+   "query": "\"rushwa ya polisi\" OR hongo polisi"
+  },
+  {
+   "label": "Amharic 1",
+   "lang": "am",
+   "standing": "press",
+   "hl": "am",
+   "gl": "ET",
+   "ceid": "ET:am",
+   "query": "የፖሊስ ጥቃት OR በእስር ላይ ሞት"
+  },
+  {
+   "label": "Hausa 1",
+   "lang": "ha",
+   "standing": "press",
+   "hl": "ha",
+   "gl": "NG",
+   "ceid": "NG:ha",
+   "query": "\"cin zarafin 'yan sanda\" OR mutuwa a hannun 'yan sanda"
+  },
+  {
+   "label": "Hausa 2",
+   "lang": "ha",
+   "standing": "press",
+   "hl": "ha",
+   "gl": "NG",
+   "ceid": "NG:ha",
+   "query": "\"cin hanci\" 'yan sanda"
+  },
+  {
+   "label": "English (US) 87",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"died in police custody\" OR \"pre-charge detention\" OR \"held without charge\" OR incommunicado"
+  },
+  {
+   "label": "English (UK) 88",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-GB",
+   "gl": "GB",
+   "ceid": "GB:en-GB",
+   "query": "torture custody OR \"coerced confession\" OR \"national preventive mechanism\" OR \"committee against torture\""
+  },
+  {
+   "label": "English (India) 89",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-IN",
+   "gl": "IN",
+   "ceid": "IN:en",
+   "query": "\"enforced disappearance\" OR \"death squad\" OR \"extrajudicial killing\" OR \"clandestine grave\""
+  },
+  {
+   "label": "English (Nigeria) 90",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-NG",
+   "gl": "NG",
+   "ceid": "NG:en",
+   "query": "Frontex pushback OR \"immigration raid\" OR \"immigration detention\" OR deportation flight"
+  },
+  {
+   "label": "English (South Africa) 91",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-ZA",
+   "gl": "ZA",
+   "ceid": "ZA:en",
+   "query": "\"transnational repression\" OR \"red notice\" abuse OR rendition OR exile targeted"
+  },
+  {
+   "label": "English (Australia) 92",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-AU",
+   "gl": "AU",
+   "ceid": "AU:en",
+   "query": "\"private security\" land defender OR vigilante OR \"paramilitary\" police auxiliary"
+  },
+  {
+   "label": "English (Kenya) 93",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-KE",
+   "gl": "KE",
+   "ceid": "KE:en",
+   "query": "\"counter-terrorism\" powers protest OR \"foreign agent\" law OR \"anti-protest law\" OR proscribed"
+  },
+  {
+   "label": "English (Philippines) 94",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-PH",
+   "gl": "PH",
+   "ceid": "PH:en",
+   "query": "\"racial profiling\" OR Roma police raid OR homeless encampment cleared OR \"fines and fees\""
+  },
+  {
+   "label": "English (US) 95",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"crowd control\" export OR \"tear gas\" supplied OR \"police training\" foreign assistance"
+  },
+  {
+   "label": "English (UK) 96",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-GB",
+   "gl": "GB",
+   "ceid": "GB:en-GB",
+   "query": "\"custodial rape\" OR officer \"sexual misconduct\" OR \"spycops\" relationship"
+  },
+  {
+   "label": "English (India) 97",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-IN",
+   "gl": "IN",
+   "ceid": "IN:en",
+   "query": "\"wrongful conviction\" OR exoneration OR \"crime lab\" scandal OR \"planted evidence\""
+  },
+  {
+   "label": "English (Nigeria) 98",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-NG",
+   "gl": "NG",
+   "ceid": "NG:en",
+   "query": "\"gang database\" OR \"risk score\" policing OR \"social media monitoring\" police"
+  },
+  {
+   "label": "Spanish (Spain) 87",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "query": "\"desaparición forzada\" OR \"ejecución extrajudicial\" OR \"fosa clandestina\""
+  },
+  {
+   "label": "Spanish (Americas) 88",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "MX",
+   "ceid": "MX:es-419",
+   "query": "\"tortura\" detenido OR \"confesión bajo coacción\""
+  },
+  {
+   "label": "Spanish (Argentina) 89",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "AR",
+   "ceid": "AR:es-419",
+   "query": "\"detención migratoria\" OR redada migratoria OR deportación"
+  },
+  {
+   "label": "Spanish (Colombia) 90",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es-419",
+   "gl": "CO",
+   "ceid": "CO:es-419",
+   "query": "\"defensores de la tierra\" asesinados OR seguridad privada desalojo"
+  },
+  {
+   "label": "French (France) 87",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "query": "\"disparition forcée\" OR \"exécution extrajudiciaire\""
+  },
+  {
+   "label": "French (Africa) 88",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "SN",
+   "ceid": "SN:fr",
+   "query": "torture garde à vue OR \"aveux forcés\""
+  },
+  {
+   "label": "French (Canada) 89",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "CA",
+   "ceid": "CA:fr",
+   "query": "\"rétention administrative\" OR rafle OR expulsion migrants"
+  },
+  {
+   "label": "French (France) 90",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "query": "\"répression transnationale\" OR notice rouge Interpol"
+  },
+  {
+   "label": "Portuguese (Brazil) 87",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "query": "\"desaparecimento forçado\" OR \"execução extrajudicial\" OR \"vala clandestina\""
+  },
+  {
+   "label": "Portuguese (Portugal) 88",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-PT",
+   "gl": "PT",
+   "ceid": "PT:pt-150",
+   "query": "tortura sob custódia OR \"confissão forçada\""
+  },
+  {
+   "label": "Portuguese (Brazil) 89",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "query": "\"defensores da terra\" mortos OR segurança privada despejo"
+  },
+  {
+   "label": "German 87",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "query": "\"Verschwindenlassen\" OR \"außergerichtliche Hinrichtung\""
+  },
+  {
+   "label": "German (Austria) 88",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "AT",
+   "ceid": "AT:de",
+   "query": "Folter Gewahrsam OR erzwungenes Geständnis"
+  },
+  {
+   "label": "German 89",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "query": "Abschiebung Razzia OR Abschiebehaft OR Pushback"
+  },
+  {
+   "label": "Russian 87",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "query": "\"насильственное исчезновение\" OR \"внесудебная казнь\""
+  },
+  {
+   "label": "Russian (Central Asia) 88",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "KZ",
+   "ceid": "KZ:ru",
+   "query": "пытки СИЗО OR \"признание под давлением\""
+  },
+  {
+   "label": "Russian 89",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "query": "\"иностранный агент\" закон OR преследование в изгнании"
+  },
+  {
+   "label": "Arabic (Egypt) 87",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "EG",
+   "ceid": "EG:ar",
+   "query": "\"الاختفاء القسري\" OR \"الإعدام خارج نطاق القضاء\" OR مقبرة جماعية"
+  },
+  {
+   "label": "Arabic (Gulf) 88",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "AE",
+   "ceid": "AE:ar",
+   "query": "تعذيب الاحتجاز OR \"اعتراف تحت الإكراه\""
+  },
+  {
+   "label": "Arabic (Levant) 89",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "LB",
+   "ceid": "LB:ar",
+   "query": "ترحيل مهاجرين OR احتجاز المهاجرين"
+  },
+  {
+   "label": "Chinese (PRC) 87",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-CN",
+   "gl": "CN",
+   "ceid": "CN:zh-Hans",
+   "query": "强迫失踪 OR 法外处决"
+  },
+  {
+   "label": "Chinese (Taiwan) 88",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-TW",
+   "gl": "TW",
+   "ceid": "TW:zh-Hant",
+   "query": "刑讯逼供 OR 看守所 死亡"
+  },
+  {
+   "label": "Chinese (PRC) 89",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-CN",
+   "gl": "CN",
+   "ceid": "CN:zh-Hans",
+   "query": "跨国镇压 OR 海外维权人士"
+  },
+  {
+   "label": "Turkish 87",
+   "lang": "tr",
+   "standing": "press",
+   "hl": "tr",
+   "gl": "TR",
+   "ceid": "TR:tr",
+   "query": "\"zorla kaybetme\" OR \"yargısız infaz\""
+  },
+  {
+   "label": "Turkish 88",
+   "lang": "tr",
+   "standing": "press",
+   "hl": "tr",
+   "gl": "TR",
+   "ceid": "TR:tr",
+   "query": "gözaltında işkence OR zorla itiraf"
+  },
+  {
+   "label": "Indonesian 87",
+   "lang": "id",
+   "standing": "press",
+   "hl": "id",
+   "gl": "ID",
+   "ceid": "ID:id",
+   "query": "\"penghilangan paksa\" OR \"pembunuhan di luar hukum\""
+  },
+  {
+   "label": "Indonesian 88",
+   "lang": "id",
+   "standing": "press",
+   "hl": "id",
+   "gl": "ID",
+   "ceid": "ID:id",
+   "query": "penyiksaan tahanan OR pengakuan paksa"
+  },
+  {
+   "label": "Hindi 87",
+   "lang": "hi",
+   "standing": "press",
+   "hl": "hi",
+   "gl": "IN",
+   "ceid": "IN:hi",
+   "query": "\"हिरासत में यातना\" OR \"फर्जी मुठभेड़\" OR लापता"
+  },
+  {
+   "label": "Hindi 88",
+   "lang": "hi",
+   "standing": "press",
+   "hl": "hi",
+   "gl": "IN",
+   "ceid": "IN:hi",
+   "query": "\"जबरन कबूलनामा\""
+  },
+  {
+   "label": "Persian 87",
+   "lang": "fa",
+   "standing": "press",
+   "hl": "fa",
+   "gl": "IR",
+   "ceid": "IR:fa",
+   "query": "\"ناپدیدسازی اجباری\" OR \"اعدام فراقضایی\""
+  },
+  {
+   "label": "Persian 88",
+   "lang": "fa",
+   "standing": "press",
+   "hl": "fa",
+   "gl": "IR",
+   "ceid": "IR:fa",
+   "query": "شکنجه بازداشت OR اعتراف اجباری"
+  },
+  {
+   "label": "Swahili 87",
+   "lang": "sw",
+   "standing": "press",
+   "hl": "sw",
+   "gl": "KE",
+   "ceid": "KE:sw",
+   "query": "\"kutoweka kwa lazima\" OR mauaji ya kiholela"
+  },
+  {
+   "label": "Swahili 88",
+   "lang": "sw",
+   "standing": "press",
+   "hl": "sw",
+   "gl": "KE",
+   "ceid": "KE:sw",
+   "query": "mateso mahabusu"
+  }
+ ],
+ "events": [
+  {
+   "label": "Court rulings on policing",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "court ruling police OR \"supreme court\" qualified immunity OR \"european court of human rights\" police"
+  },
+  {
+   "label": "Oversight findings",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"police watchdog\" finds OR \"oversight board\" report OR inspectorate report policing"
+  },
+  {
+   "label": "Inquiries and commissions",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"public inquiry\" police OR \"royal commission\" policing OR \"undercover policing inquiry\""
+  },
+  {
+   "label": "Surveillance procurement",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "police contract facial recognition OR surveillance procurement law enforcement"
+  },
+  {
+   "label": "Surveillance law",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "surveillance bill OR \"investigatory powers\" OR \"lawful access\" encryption legislation"
+  },
+  {
+   "label": "Custody deaths",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"died in custody\" inquest OR \"custody death\" investigation"
+  },
+  {
+   "label": "Force settlements",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "city settles police lawsuit OR \"wrongful death\" police settlement"
+  },
+  {
+   "label": "Protest crackdowns",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "protest arrests police OR \"protest ban\" OR demonstration dispersed force"
+  },
+  {
+   "label": "Decertification and dismissals",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "officer decertified OR officers dismissed misconduct OR police chief resigns"
+  },
+  {
+   "label": "Reform legislation",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"police reform\" bill passed OR policing act amendment OR accountability legislation"
+  },
+  {
+   "label": "Custody death inquests",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"died in police custody\" inquest OR \"custody death\" verdict"
+  },
+  {
+   "label": "Torture findings",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"committee against torture\" OR \"special rapporteur\" torture findings OR CPT report"
+  },
+  {
+   "label": "Disappearance rulings",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"enforced disappearance\" ruling OR \"working group on enforced disappearances\""
+  },
+  {
+   "label": "Border litigation",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "pushback ruling court OR Frontex complaint OR deportation blocked court"
+  },
+  {
+   "label": "Interpol abuse",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"red notice\" removed OR Interpol commission files OR politically motivated notice"
+  },
+  {
+   "label": "Defender killings",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "\"land defender\" killed OR \"human rights defender\" killed police security"
+  },
+  {
+   "label": "Protest prosecutions",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "protesters charged terrorism OR activists convicted protest OR injunction protest"
+  },
+  {
+   "label": "Export licensing",
+   "lang": "en",
+   "standing": "official",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "query": "export licence refused security equipment OR crowd control export ban"
+  }
+ ]
+}
