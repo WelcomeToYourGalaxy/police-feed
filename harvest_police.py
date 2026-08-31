@@ -1530,10 +1530,10 @@ def run(dry_run=False, fixtures=None):
         "notable_score": NOTABLE_SCORE,
         "languages": languages,
         "standings": [
-            {"id": "official", "label": "Institutions & central banks"},
-            {"id": "research", "label": "Research & analysis"},
+            {"id": "official", "label": "Oversight bodies & institutions"},
+            {"id": "research", "label": "Research & forensic investigation"},
             {"id": "press", "label": "Press"},
-            {"id": "rights", "label": "Debt, land & trade justice"},
+            {"id": "rights", "label": "Rights & civil liberties groups"},
         ],
         "topics": [{"id": tid, "label": label} for tid, label, _ in TOPICS],
         "coords": COORDS,
