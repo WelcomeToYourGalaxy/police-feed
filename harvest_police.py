@@ -492,10 +492,10 @@ TOPICS = [
         ("embezzlement", ["police", "force", "department"]),
     ]),
     ("infiltration", "Criminal infiltration of the force", [
-        ("gang", ["officer", "police", "infiltrat", "correctional", "prison staff", "deputy"]),
-        ("organised crime", ["police", "infiltrat", "officer", "corrupt", "collusion"]),
-        ("organized crime", ["police", "infiltrat", "officer", "corrupt", "collusion"]),
-        ("criminal network", ["police", "infiltrat", "official", "corruption"]),
+        ("gang", ["officer", "police", "infiltrat*", "correctional", "prison staff", "deputy"]),
+        ("organised crime", ["police", "infiltrat*", "officer", "corrupt", "collusion"]),
+        ("organized crime", ["police", "infiltrat*", "officer", "corrupt", "collusion"]),
+        ("criminal network", ["police", "infiltrat*", "official", "corruption"]),
         ("collusion", ["police", "officer", "cartel", "gang", "criminal"]),
         ("compromised officer", []), ("corrupt officer", []), ("rogue unit", []),
         ("deputy gang", []), ("police cartel", []), ("cartel", ["police", "officer", "commander", "payroll"]),
@@ -713,7 +713,7 @@ TOPICS = [
         ("disproportionate", ["stop", "search", "arrest", "force", "policing"]),
         ("fines and fees", []), ("debt collection", ["court", "police", "arrest", "warrant"]),
         ("school police", []), ("school resource officer", []),
-        ("crimes of poverty", []), ("loitering", ["arrest", "ordinance", "criminalis"]),
+        ("crimes of poverty", []), ("loitering", ["arrest", "ordinance", "criminalis*"]),
     ]),
     ("export", "Training and equipment export", [
         ("police training", ["foreign", "abroad", "assistance", "programme", "program", "provided"]),
@@ -733,7 +733,7 @@ TOPICS = [
         ("relationship", ["undercover officer", "deceived", "spycops"]),
         ("domestic abuse", ["officer", "police", "serving", "force"]),
         ("harassment", ["officer", "police", "colleague", "force", "inquiry"]),
-        ("strip search", ["child", "unlawful", "humiliating", "traumatis"]),
+        ("strip search", ["child", "unlawful", "humiliating", "traumatis*"]),
     ]),
 ]
 
