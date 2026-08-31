@@ -1329,7 +1329,6 @@ def run(dry_run=False, fixtures=None):
             {"id": "research", "label": "Research & analysis"},
             {"id": "press", "label": "Press"},
             {"id": "rights", "label": "Debt, land & trade justice"},
-            {"id": "watchdog", "label": "Watchdogs & oversight"},
         ],
         "topics": [{"id": tid, "label": label} for tid, label, _ in TOPICS],
         "coords": COORDS,
