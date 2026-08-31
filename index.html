@@ -12,7 +12,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Marcellus&display=swap');
 /* ============================================================
-   The Space Front — a monitoring feed.
+   Law Enforcement — a monitoring feed.
    Everything scoped to .pf so it can be embedded anywhere.
    ============================================================ */
 .pf {
@@ -91,6 +91,9 @@
     background: rgba(255,255,255,0.05); border: 1px solid var(--line); border-radius: 999px;
     padding: 0.26rem 0.5rem; cursor: pointer; max-width: 150px; }
 .pf-tr select:focus { outline: none; border-color: rgba(255,255,255,0.28); }
+/* Options render in the platform's own menu, which is light on most systems.
+   Without this they inherit the near-white --ink and print white on white. */
+.pf-tr select option { color: #131311; background: #e8e6e1; }
 .pf-mt { color: var(--ink-faint); border: 1px solid var(--line-soft); border-radius: 999px;
     padding: 0.02rem 0.38rem; letter-spacing: 0.1em; }
 .pf-orig { color: var(--ink-faint); text-decoration: underline; text-underline-offset: 2px; }
@@ -124,7 +127,7 @@
 .pf-sheet-close:hover { color: var(--ink); }
 .pf-note { font-size: 0.68rem; line-height: 1.6; color: var(--ink-dim); margin: 0 0 0.6rem; max-width: 96ch; }
 .pf-note strong { color: var(--ink); font-weight: 500; }
-.pf-spf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.1rem 0.9rem; }
+.pf-src-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.1rem 0.9rem; }
 .pf-src { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.62rem; color: var(--ink-dim); padding: 0.14rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
 .pf-src span:last-child { font-variant-numeric: tabular-nums; color: var(--ink-faint); }
 .pf-src.fail span:last-child { color: #c08a86; }
@@ -153,11 +156,6 @@
         radial-gradient(ellipse 120% 85% at 50% 108%, rgba(12,16,11,0.40), transparent 54%); }
 .pf-placed { margin: 0.2rem 0 0; font-size: 0.68rem; line-height: 1.4; color: var(--ink-faint); }
 .pf-placed b { font-weight: 400; color: var(--ink-dim); }
-    border-top: 1px solid var(--line-soft); background: #0e0f0c; }
-    font-size: 0.55rem; color: var(--ink-faint); border-bottom: 1px solid var(--line-soft); }
-    cursor: pointer; padding: 0 0.15rem; }
-    font: inherit; font-size: 0.5rem; letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 0.1rem 0.4rem; border-radius: 3px; cursor: pointer; }
 .pf-map-note { flex: 0 0 auto; font-size: 0.55rem; color: var(--ink-faint); padding: 0.28rem 0.6rem;
     border-top: 1px solid var(--line-soft); display: flex; align-items: center; gap: 0.5rem; }
 .pf-map .leaflet-container { background: #0e0f0c; font-family: inherit; }
@@ -295,7 +293,7 @@
             Every wire read on the last harvest, with its standing: what it returned, and how many of its
             stories were refused. A wire that could not be reached says so rather than disappearing.
         </p>
-        <div class="pf-spf-grid" id="pfSrcGrid"></div>
+        <div class="pf-src-grid" id="pfSrcGrid"></div>
     </div>
 
     <footer class="pf-foot">
@@ -321,31 +319,37 @@ const ENDPOINTS = [
 // One colour per topic the harvester emits, grouped so the families read
 // together: money in the clay and mauve band, law and trade in slate,
 // the surveillance apparatus in slate, the accountability subjects in moss.
+// A selected chip prints #131311 on the topic colour, so each of these is
+// held above a 5.6:1 contrast ratio against that text — the previous set ran
+// as low as 4.27:1 and the labels went unreadable when a chip was on.
+// Grouped by family: conduct and accountability in clay, what is done to
+// people in rose and mauve, the surveillance apparatus in slate, infiltration
+// in violet, and what can be refused or reformed in moss and teal.
 const TOPIC_COLOR = {
-    duty: '#b58080',
-    immunity: '#c08a86',
-    corruption: '#c4a6a2',
-    infiltration: '#a9756f',
-    force: '#b0705f',
-    militarisation: '#a8806a',
-    custody: '#bf9080',
-    torture: '#a86f78',
-    disappearance: '#9d6b7a',
-    sexual: '#b58aa0',
-    surveillance: '#8ea2b8',
-    data: '#93a3c0',
-    privacy: '#7f9bb5',
-    export: '#9aabc4',
-    infiltrators: '#a496b8',
-    political: '#9b8bb0',
-    transnational: '#b193a8',
-    private: '#8f86a8',
-    rights: '#a8b79a',
-    compelled: '#86a5a5',
-    disarm: '#93b3a4',
-    targets: '#b0a68c',
-    reform: '#9bb08a',
-    border: '#c0a276'
+    duty: '#b3877e',           // clay
+    immunity: '#bc9699',       // dusty rose
+    corruption: '#c0a3ac',     // pale rose
+    infiltration: '#bf8b87',   // warm clay
+    force: '#ba7c87',          // deep rose
+    militarisation: '#ba8ea1', // muted rose
+    custody: '#bd9db2',        // pale mauve
+    torture: '#b284ad',        // mauve
+    disappearance: '#b696ba',  // soft mauve
+    sexual: '#b6a4c1',         // pale violet
+    surveillance: '#8097b7',   // slate blue
+    data: '#89a5b7',           // dusty blue
+    privacy: '#a3aac3',        // pale slate
+    export: '#699aa7',         // weathered teal
+    infiltrators: '#a392bc',   // muted violet
+    political: '#a6a0bf',      // soft violet
+    transnational: '#aaaac4',  // pale periwinkle
+    private: '#a285b7',        // deep violet
+    rights: '#76a398',         // teal moss
+    compelled: '#8cad9e',      // sage teal
+    disarm: '#719e7f',         // moss
+    targets: '#96b296',        // pale moss
+    reform: '#8da780',         // sage
+    border: '#96b4b4'          // pale teal
 };
 // Standing colours are deliberately neutral in tone: the two advocacy labels
 // are as visually equal as the palette allows.
