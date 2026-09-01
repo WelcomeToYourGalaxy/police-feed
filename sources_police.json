@@ -742,7 +742,7 @@
    "hl": "zh-TW",
    "gl": "TW",
    "ceid": "TW:zh-Hant",
-   "query": "警察 腐败 OR 受贿 OR 索贿"
+   "query": "警察 腐敗 OR 受賄 OR 索賄"
   },
   {
    "label": "Chinese (Hong Kong) 3",
@@ -751,7 +751,7 @@
    "hl": "zh-HK",
    "gl": "HK",
    "ceid": "HK:zh-Hant",
-   "query": "人脸识别 监控 OR 大规模监控 OR 天网"
+   "query": "人臉識別 監控 OR 大規模監控 OR 天網"
   },
   {
    "label": "Chinese (PRC) 4",
@@ -1417,7 +1417,7 @@
    "hl": "zh-TW",
    "gl": "TW",
    "ceid": "TW:zh-Hant",
-   "query": "刑讯逼供 OR 看守所 死亡"
+   "query": "刑訊逼供 OR 看守所 死亡"
   },
   {
    "label": "Chinese (PRC) 89",
@@ -1517,6 +1517,406 @@
    "gl": "KE",
    "ceid": "KE:sw",
    "query": "mateso mahabusu"
+  },
+  {
+   "label": "English (US) · duty",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "theme": "duty",
+   "query": "\"no duty to protect\" police OR failure to protect lawsuit police OR police liability ruling"
+  },
+  {
+   "label": "Español · duty",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "theme": "duty",
+   "query": "demanda por omisión policial OR responsabilidad de la policía sentencia"
+  },
+  {
+   "label": "Português (BR) · duty",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "theme": "duty",
+   "query": "ação por omissão policial OR responsabilidade da polícia decisão"
+  },
+  {
+   "label": "Français · duty",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "theme": "duty",
+   "query": "plainte pour carence policière OR responsabilité de la police décision"
+  },
+  {
+   "label": "Deutsch · duty",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "theme": "duty",
+   "query": "Klage wegen Untätigkeit der Polizei OR Amtshaftung Polizei Urteil"
+  },
+  {
+   "label": "Italiano · duty",
+   "lang": "it",
+   "standing": "press",
+   "hl": "it",
+   "gl": "IT",
+   "ceid": "IT:it",
+   "theme": "duty",
+   "query": "omissione di soccorso polizia OR responsabilità della polizia sentenza"
+  },
+  {
+   "label": "Русский · duty",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "theme": "duty",
+   "query": "бездействие полиции иск OR ответственность полиции решение суда"
+  },
+  {
+   "label": "日本語 · duty",
+   "lang": "ja",
+   "standing": "press",
+   "hl": "ja",
+   "gl": "JP",
+   "ceid": "JP:ja",
+   "theme": "duty",
+   "query": "警察 不作為 訴訟 OR 警察の責任 判決"
+  },
+  {
+   "label": "한국어 · duty",
+   "lang": "ko",
+   "standing": "press",
+   "hl": "ko",
+   "gl": "KR",
+   "ceid": "KR:ko",
+   "theme": "duty",
+   "query": "경찰 부작위 소송 OR 경찰 책임 판결"
+  },
+  {
+   "label": "中文 · duty",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-TW",
+   "gl": "TW",
+   "ceid": "TW:zh-Hant",
+   "theme": "duty",
+   "query": "警方 不作為 訴訟 OR 警察 責任 判決"
+  },
+  {
+   "label": "العربية · duty",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "EG",
+   "ceid": "EG:ar",
+   "theme": "duty",
+   "query": "دعوى تقصير الشرطة OR مسؤولية الشرطة حكم"
+  },
+  {
+   "label": "English (US) · privacy",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "theme": "privacy",
+   "query": "encrypted messaging backdoor law OR VPN logs seized OR Tor deanonymisation police"
+  },
+  {
+   "label": "Español · privacy",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "theme": "privacy",
+   "query": "ley de puerta trasera en mensajería cifrada OR registros de VPN incautados"
+  },
+  {
+   "label": "Português (BR) · privacy",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "theme": "privacy",
+   "query": "lei de backdoor em mensagens cifradas OR registos de VPN apreendidos"
+  },
+  {
+   "label": "Français · privacy",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "theme": "privacy",
+   "query": "loi sur les portes dérobées messagerie chiffrée OR journaux VPN saisis"
+  },
+  {
+   "label": "Deutsch · privacy",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "theme": "privacy",
+   "query": "Gesetz Hintertür verschlüsselte Nachrichten OR VPN-Protokolle beschlagnahmt"
+  },
+  {
+   "label": "Italiano · privacy",
+   "lang": "it",
+   "standing": "press",
+   "hl": "it",
+   "gl": "IT",
+   "ceid": "IT:it",
+   "theme": "privacy",
+   "query": "legge backdoor messaggistica cifrata OR log VPN sequestrati"
+  },
+  {
+   "label": "Русский · privacy",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "theme": "privacy",
+   "query": "закон о бэкдоре в шифровании OR изъятие логов VPN"
+  },
+  {
+   "label": "日本語 · privacy",
+   "lang": "ja",
+   "standing": "press",
+   "hl": "ja",
+   "gl": "JP",
+   "ceid": "JP:ja",
+   "theme": "privacy",
+   "query": "暗号化メッセージ バックドア 法案 OR VPN ログ 押収"
+  },
+  {
+   "label": "한국어 · privacy",
+   "lang": "ko",
+   "standing": "press",
+   "hl": "ko",
+   "gl": "KR",
+   "ceid": "KR:ko",
+   "theme": "privacy",
+   "query": "암호화 메신저 백도어 법 OR VPN 기록 압수"
+  },
+  {
+   "label": "中文 · privacy",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-TW",
+   "gl": "TW",
+   "ceid": "TW:zh-Hant",
+   "theme": "privacy",
+   "query": "加密通訊 後門 立法 OR VPN 日誌 被查封"
+  },
+  {
+   "label": "العربية · privacy",
+   "lang": "ar",
+   "standing": "press",
+   "hl": "ar",
+   "gl": "EG",
+   "ceid": "EG:ar",
+   "theme": "privacy",
+   "query": "قانون الباب الخلفي للتشفير OR مصادرة سجلات VPN"
+  },
+  {
+   "label": "English (US) · export",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "theme": "export",
+   "query": "surveillance technology export licence OR police equipment export ban OR crowd control exports"
+  },
+  {
+   "label": "Español · export",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "theme": "export",
+   "query": "licencia de exportación de tecnología de vigilancia OR prohibición de exportar material antidisturbios"
+  },
+  {
+   "label": "Português (BR) · export",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "theme": "export",
+   "query": "licença de exportação de tecnologia de vigilância OR proibição de exportar material antimotim"
+  },
+  {
+   "label": "Français · export",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "theme": "export",
+   "query": "licence d'exportation de technologies de surveillance OR interdiction d'exporter du matériel antiémeute"
+  },
+  {
+   "label": "Deutsch · export",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "theme": "export",
+   "query": "Ausfuhrgenehmigung Überwachungstechnik OR Exportverbot Polizeiausrüstung"
+  },
+  {
+   "label": "Italiano · export",
+   "lang": "it",
+   "standing": "press",
+   "hl": "it",
+   "gl": "IT",
+   "ceid": "IT:it",
+   "theme": "export",
+   "query": "licenza di esportazione tecnologie di sorveglianza OR divieto di export materiale antisommossa"
+  },
+  {
+   "label": "Русский · export",
+   "lang": "ru",
+   "standing": "press",
+   "hl": "ru",
+   "gl": "RU",
+   "ceid": "RU:ru",
+   "theme": "export",
+   "query": "экспортная лицензия на технологии слежки OR запрет экспорта спецсредств"
+  },
+  {
+   "label": "日本語 · export",
+   "lang": "ja",
+   "standing": "press",
+   "hl": "ja",
+   "gl": "JP",
+   "ceid": "JP:ja",
+   "theme": "export",
+   "query": "監視技術 輸出許可 OR 治安機材 輸出規制"
+  },
+  {
+   "label": "한국어 · export",
+   "lang": "ko",
+   "standing": "press",
+   "hl": "ko",
+   "gl": "KR",
+   "ceid": "KR:ko",
+   "theme": "export",
+   "query": "감시 기술 수출 허가 OR 진압 장비 수출 규제"
+  },
+  {
+   "label": "中文 · export",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-TW",
+   "gl": "TW",
+   "ceid": "TW:zh-Hant",
+   "theme": "export",
+   "query": "監控技術 出口許可 OR 警用裝備 出口管制"
+  },
+  {
+   "label": "English (US) · disarm",
+   "lang": "en",
+   "standing": "press",
+   "hl": "en-US",
+   "gl": "US",
+   "ceid": "US:en",
+   "theme": "disarm",
+   "query": "unarmed policing model OR routine arming of police debate OR taser rollout review"
+  },
+  {
+   "label": "Español · disarm",
+   "lang": "es",
+   "standing": "press",
+   "hl": "es",
+   "gl": "ES",
+   "ceid": "ES:es",
+   "theme": "disarm",
+   "query": "policía sin armas modelo OR debate sobre el armamento policial"
+  },
+  {
+   "label": "Português (BR) · disarm",
+   "lang": "pt",
+   "standing": "press",
+   "hl": "pt-BR",
+   "gl": "BR",
+   "ceid": "BR:pt-419",
+   "theme": "disarm",
+   "query": "polícia sem armas modelo OR debate sobre o armamento policial"
+  },
+  {
+   "label": "Français · disarm",
+   "lang": "fr",
+   "standing": "press",
+   "hl": "fr",
+   "gl": "FR",
+   "ceid": "FR:fr",
+   "theme": "disarm",
+   "query": "police non armée modèle OR débat sur l'armement de la police"
+  },
+  {
+   "label": "Deutsch · disarm",
+   "lang": "de",
+   "standing": "press",
+   "hl": "de",
+   "gl": "DE",
+   "ceid": "DE:de",
+   "theme": "disarm",
+   "query": "unbewaffnete Polizei Modell OR Debatte Bewaffnung der Polizei"
+  },
+  {
+   "label": "日本語 · disarm",
+   "lang": "ja",
+   "standing": "press",
+   "hl": "ja",
+   "gl": "JP",
+   "ceid": "JP:ja",
+   "theme": "disarm",
+   "query": "警察官 拳銃 携帯 議論 OR テーザー 導入 検証"
+  },
+  {
+   "label": "한국어 · disarm",
+   "lang": "ko",
+   "standing": "press",
+   "hl": "ko",
+   "gl": "KR",
+   "ceid": "KR:ko",
+   "theme": "disarm",
+   "query": "경찰 비무장 모델 OR 테이저건 도입 검토"
+  },
+  {
+   "label": "中文 · disarm",
+   "lang": "zh",
+   "standing": "press",
+   "hl": "zh-TW",
+   "gl": "TW",
+   "ceid": "TW:zh-Hant",
+   "theme": "disarm",
+   "query": "警察 不配槍 模式 OR 電擊槍 配備 檢討"
   }
  ],
  "events": [

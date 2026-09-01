@@ -38,6 +38,20 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 
+# The shared gazetteer. Placement used to be each wire's own short country
+# table, which put most of every wire in a counter marked "unplaced"; this is
+# the fleet's common one, and it is optional at import so a harvest still runs
+# if the data file has not been fetched yet.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+try:
+    import galaxy_places
+    _GAZETTEER = True
+except Exception as _exc:                       # noqa: BLE001
+    print("  ! gazetteer unavailable (%s); falling back to the local table"
+          % _exc, file=sys.stderr)
+    galaxy_places = None
+    _GAZETTEER = False
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 SOURCES_PATH = os.path.join(HERE, "sources_police.json")
 OUT_PATH = os.path.join(HERE, "wire_police.json")
@@ -68,9 +82,24 @@ def build_gnews_url(loc):
     return ("https://news.google.com/rss/search?q=" + urllib.parse.quote(q) +
             "&hl=" + loc["hl"] + "&gl=" + loc["gl"] + "&ceid=" + loc["ceid"])
 
+READ_BUDGET_MIN = 35          # minutes spent reading wires
+
+# The wall-clock budget for reading wires. Past it the remaining sources are
+# recorded unreachable and the harvest finishes on what it has, because the
+# wire is only written at the end of run() and a job killed by the workflow
+# timeout commits nothing at all — which is how a feed gets stuck stale.
+DEADLINE = None
+
+
+def out_of_time():
+    return DEADLINE is not None and time.monotonic() > DEADLINE
+
+
 def fetch(url, tries=3):
     last = None
     for attempt in range(tries):
+        if out_of_time():
+            return None
         try:
             req = urllib.request.Request(url, headers={
                 "User-Agent": USER_AGENT,
@@ -83,6 +112,16 @@ def fetch(url, tries=3):
                 if resp.headers.get("Content-Encoding") == "gzip":
                     raw = gzip.GzipFile(fileobj=io.BytesIO(raw)).read()
                 return raw
+        except urllib.error.HTTPError as exc:
+            last = exc
+            # Being rate-limited or refused is an answer, not a hiccup. Trying
+            # the same query twice more against the same limiter spends eighty
+            # seconds of a worker slot to be told the same thing, and deepens
+            # the throttle for every other query in the run.
+            if exc.code in (403, 429, 451):
+                time.sleep(1.5)
+                break
+            time.sleep(1.5 * (attempt + 1))
         except Exception as exc:                       # noqa: BLE001 — report, don't crash the run
             last = exc
             time.sleep(1.5 * (attempt + 1))
@@ -811,6 +850,102 @@ DECIDED_C = _compile_all(DECIDED)
 INSTITUTIONAL_C = _compile_all(INSTITUTIONAL)
 MEASURED_C = _compile_all(MEASURED)
 PENDING_C = _compile_all(PENDING)
+LOCAL_TERMS = {
+    "surveillance": [
+        # The commercial spyware cluster arrived weekly and matched nothing:
+        # the subject was written for state surveillance programmes and not for
+        # the vendors, the alerts or the victims.
+        ("spyware", None), ("mercenary surveillance", None), ("threat notification*", None),
+        ("pegasus", None), ("predator spyware", None), ("commercial surveillance", None),
+        ("stalkerware", None), ("phone hacking", ["state", "police", "journalist*", "activist*"]),
+        ("logiciel espion", None), ("programa espía", None), ("spionagesoftware", None),
+        ("шпионск", ["программ", "по"]), ("间谍软件", None), ("スパイウェア", None),
+    ],
+    "custody": [
+        ("inquest", None), ("death in custody", None), ("died in custody", None),
+        ("reopened inquiry", None), ("reopened inquest", None),
+        ("steve biko", None), ("custodial death*", None),
+    ],
+}
+
+for _tid, _label, _terms in TOPICS:
+    _terms.extend(LOCAL_TERMS.get(_tid, []))
+
+# ------------------------------------------------------------------
+# Subjects this wire had a name for and never asked about.
+#
+# The terms below were already here and were well written; what was
+# missing was any query aimed at them, so they held zero stories
+# however much the world published. These are the phrases from the
+# queries now added, so what is fetched can be filed.
+# ------------------------------------------------------------------
+FILL_TERMS = {
+    "disarm": [
+        ("debate sobre el", None), ("debate sobre o", None),
+        ("debatte bewaffnung der", None), ("débat sur l'armement", None),
+        ("police non armée", None), ("policía sin armas", None),
+        ("polícia sem armas", None), ("unbewaffnete polizei modell", None),
+        ("テーザー 導入 検証", None), ("电击枪 配备 检讨", None),
+        ("警察 不配枪 模式", None), ("警察官 拳銃 携帯", None),
+        ("경찰 비무장 모델", None), ("테이저건 도입 검토", None),
+    ],
+    "duty": [
+        ("amtshaftung polizei urteil", None), ("ação por omissão", None),
+        ("demanda por omisión", None), ("klage wegen untätigkeit", None),
+        ("omissione di soccorso", None), ("plainte pour carence", None),
+        ("responsabilidad de la", None), ("responsabilidade da polícia", None),
+        ("responsabilità della polizia", None), ("responsabilité de la", None),
+        ("бездействие полиции иск", None), ("ответственность полиции решение", None),
+        ("دعوى تقصير الشرطة", None), ("مسؤولية الشرطة حكم", None),
+        ("警察 不作為 訴訟", None), ("警察 责任 判决", None),
+        ("警察の責任 判決", None), ("警方 不作为 诉讼", None),
+        ("경찰 부작위 소송", None), ("경찰 책임 판결", None),
+    ],
+    "export": [
+        ("ausfuhrgenehmigung überwachungstechnik", None), ("divieto di export", None),
+        ("exportverbot polizeiausrüstung", None), ("interdiction d'exporter du", None),
+        ("licence d'exportation de", None), ("licencia de exportación", None),
+        ("licenza di esportazione", None), ("licença de exportação", None),
+        ("prohibición de exportar", None), ("proibição de exportar", None),
+        ("запрет экспорта спецсредств", None), ("экспортная лицензия на", None),
+        ("治安機材 輸出規制", None), ("监控技术 出口许可", None),
+        ("監視技術 輸出許可", None), ("警用装备 出口管制", None),
+        ("감시 기술 수출", None), ("진압 장비 수출", None),
+    ],
+    "privacy": [
+        ("gesetz hintertür verschlüsselte", None), ("journaux vpn saisis", None),
+        ("legge backdoor messaggistica", None), ("lei de backdoor", None),
+        ("ley de puerta", None), ("log vpn sequestrati", None),
+        ("loi sur les", None), ("registos de vpn", None),
+        ("registros de vpn", None), ("vpn ログ 押収", None),
+        ("vpn 日志 被查封", None), ("vpn 기록 압수", None),
+        ("vpn-protokolle beschlagnahmt", None), ("закон о бэкдоре", None),
+        ("изъятие логов vpn", None), ("قانون الباب الخلفي", None),
+        ("مصادرة سجلات vpn", None), ("加密通讯 后门 立法", None),
+        ("暗号化メッセージ バックドア 法案", None), ("암호화 메신저 백도어", None),
+    ],
+}
+
+for _tid, _label, _terms in TOPICS:
+    _terms.extend(FILL_TERMS.get(_tid, []))
+
+
+# --------------------------------------------------------------------------
+# The same subjects in the languages this wire's own queries ask in, derived
+# from those queries and filed under the subject each query's label names. The
+# gate above was written in English; the queries were translated and it was
+# not, so three quarters of what the wire fetched could not be recognised once
+# it arrived. Generated — edit topics_multilingual.json, or delete the file to
+# turn this off.
+# --------------------------------------------------------------------------
+_EXTRA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           "topics_multilingual.json")
+if os.path.exists(_EXTRA_PATH):
+    with open(_EXTRA_PATH, encoding="utf-8") as _fh:
+        _EXTRA = json.load(_fh)
+    TOPICS = [(tid, label, terms + [(t, g) for t, g in _EXTRA.get(tid, [])])
+              for tid, label, terms in TOPICS]
+
 TOPICS_C = [(tid, label, [(_compile(t), _compile_all(g) if g else None) for t, g in terms])
             for tid, label, terms in TOPICS]
 GEO3_C = [(rid, rlabel, [(sid, slabel, [(pid, plabel, _compile_all(terms))
@@ -1399,19 +1534,91 @@ def scene_first(text, places):
         (scene if _is_scene(text, _first_pos(text, terms.get(pid, []))) else rest).append(pid)
     return scene + rest
 
-def point_for(text, places, subs, regions):
-    """The most specific point a story resolved to: a named sub-national place
-    if there is one, otherwise the country, otherwise the subregion or region.
-    Returns (label_or_None, point_or_None)."""
+
+# --------------------------------------------------------------------------
+# The gazetteer answers with a country; this wire's taxonomy is keyed on ids
+# whose leading token is that country's ISO-2. Filing a placed story under its
+# region is therefore a lookup, not a guess. Where a country is split across
+# several places, only region and subregion are filled: which of the places a
+# story belongs to is a question the country code cannot answer.
+# --------------------------------------------------------------------------
+ISO_REGION = {}
+for _rid, _rlabel, _subs in GEO3:
+    for _sid, _slabel, _places in _subs:
+        for _pid, _plabel, _terms in _places:
+            _iso = _pid.split("-")[0].lower()
+            if len(_iso) == 2:
+                ISO_REGION.setdefault(_iso, (_rid, _sid))
+
+
+def file_by_country(row, cc):
+    """Put a gazetteer-placed story in its region, if the wire has one."""
+    if not cc:
+        return
+    hit = ISO_REGION.get(str(cc).lower())
+    if not hit:
+        return
+    rid, sid = hit
+    if not row.get("w") or row["w"] == ["unlocated"]:
+        row["w"] = [rid]
+    if not row.get("sr") or row["sr"] == ["unlocated"]:
+        row["sr"] = [sid]
+
+
+
+def country_for(raw, locale=None):
+    """The ISO-2 the placement resolved to, or None."""
+    if not _GAZETTEER:
+        return None
+    try:
+        return galaxy_places.resolve_full(raw, locale)[4]
+    except Exception:
+        return None
+
+
+def point_for(text, places, subs, regions, locale=None, raw=None):
+    """The most specific point a story resolved to.
+
+    The order is deliberate. This wire's own curated table goes first: it holds
+    the places this subject actually turns up and the country list it was
+    written against, and it beats a general gazetteer on its own ground. The
+    shared gazetteer follows but only overrides at the settlement level, so a
+    headline naming Kharkiv pins on Kharkiv rather than the middle of Ukraine,
+    while a country reading from this wire's own table still wins over a
+    country reading from the gazetteer. Then the bodies that stand for a
+    jurisdiction without naming it — EFSA is a European story, ANVISA a
+    Brazilian one. Last, and weakest, the country the source itself reports
+    from.
+
+    Returns (label_or_None, point_or_None, approx). approx is True only for
+    that last case, where nothing in the story placed it and the point is the
+    reporting locale rather than the scene. The page draws those hollow.
+    """
     label, point = precise_for(text)
     if point:
-        return label, point
+        return label, point, False
+
+    glabel, gpoint, grank = None, None, -1
+    if _GAZETTEER:
+        glabel, gpoint, grank, _approx = galaxy_places.resolve_ranked(raw or text)
+        if grank == 3:
+            return glabel, gpoint, False
+
     places = scene_first(text, places)
     for level in (places, subs, regions):
         for pid in level:
             if pid in COORDS:
-                return None, COORDS[pid]
-    return None, None
+                return None, COORDS[pid], False
+
+    if gpoint:
+        return glabel, gpoint, False
+
+    if _GAZETTEER and locale:
+        llabel, lpoint, _lrank, lapprox = galaxy_places.resolve_ranked("", locale)
+        if lpoint:
+            return llabel, lpoint, lapprox
+
+    return None, None, False
 
 
 def load_sources():
@@ -1425,12 +1632,15 @@ def load_sources():
         for loc in cfg.get(block, []):
             srcs.append({"name": prefix + loc["label"], "lang": loc["lang"],
                          "standing": loc["standing"], "region": loc["standing"],
-                         "kind": "news", "url": build_gnews_url(loc)})
+                         "kind": "news", "url": build_gnews_url(loc), "gl": loc.get("gl")})
     return srcs, cfg
 
 
 def run(dry_run=False, fixtures=None):
+    global DEADLINE
     sources, cfg = load_sources()
+    if not fixtures:
+        DEADLINE = time.monotonic() + READ_BUDGET_MIN * 60
     print("Reading %d wires…" % len(sources))
 
     def read(src):
@@ -1484,11 +1694,22 @@ def run(dry_run=False, fixtures=None):
                     continue
                 regions, subs, places = places_for(text)
                 total, reasons = weight(text, src["standing"], regions != ["unlocated"])
-                row["x"] = topics_for(text) or ["duty"]
+                # No silent default, as on the rest of the fleet.
+                subjects = topics_for(text)
+                if not subjects:
+                    stat["refused"] += 1
+                    refused += 1
+                    continue
+                row["x"] = subjects
                 row["w"] = regions
                 row["sr"] = subs
                 row["pl"] = places
-                row["pn"], row["ll"] = point_for(text, places, subs, regions)
+                row["gl"] = src.get("gl")
+                _raw = (row["t"] or "") + " " + (row.get("s") or "")
+                row["pn"], row["ll"], row["pa"] = point_for(
+                    text, places, subs, regions, src.get("gl"), _raw)
+                if row["ll"]:
+                    file_by_country(row, country_for(_raw, src.get("gl")))
                 row["p"] = total
                 row["y"] = reasons
                 row["st"] = src["standing"]
@@ -1501,8 +1722,23 @@ def run(dry_run=False, fixtures=None):
 
     fresh_urls = {canon_url(i["u"]) for i in items}
     for row in previous:
-        if "x" in row:
-            absorb(row)
+        if "x" not in row:
+            continue
+        # A retained story is placed again rather than carried forward with the
+        # answer it happened to get the day it was first read. RETAIN_DAYS is
+        # 45, so without this a change to the placement layer takes a month and
+        # a half to reach the map, and a story never re-fetched keeps its first
+        # answer for good. Rows already holding a point resolved from their own
+        # text are left alone; only the unplaced and the source-country
+        # approximations are reconsidered.
+        if not row.get("ll") or row.get("pa"):
+            _raw = ((row.get("t") or "") + " " + (row.get("s") or ""))
+            row["pn"], row["ll"], row["pa"] = point_for(
+                _raw.lower(), row.get("pl") or [], row.get("sr") or [],
+                row.get("w") or [], row.get("gl"), _raw)
+            if row["ll"]:
+                file_by_country(row, country_for(_raw, row.get("gl")))
+        absorb(row)
 
     cutoff = int(time.time() * 1000) - RETAIN_DAYS * 86400000
     items = [i for i in items if (i.get("d") or cutoff + 1) >= cutoff]
